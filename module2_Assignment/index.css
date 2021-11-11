@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.header {
+    margin: 20px;
+    text-align: center;
+}
+.container .row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12 fr);
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+
+}
+.desktop1, .desktop2, .desktop3 {
+    position: relative;
+    background: #a1a1a1;
+    border: 1px solid #000;
+    padding: 0px 10px;
+}
+
+.tittle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid #000;
+    padding: 5px 30px;
+
+}
+p {
+    margin-top: 50px;
+}
+.desktop1 .tittle, .tablet1 .tittle, .mobile1 .tittle {
+    background: #ae22ff;
+}
+.desktop2 .tittle .tablet2 .tittle, .mobile2 .tittle {
+    background: #ff22ff;
+}
+.desktop3 .tittle .tablet3 .tittle, .mobile3 .tittle {
+    background: #ae2112;
+}
+
+@media (min-width: 992px) {
+    .desktop1 {
+        grid-column: 1 / 5;
+    }
+    .desktop2 {
+        grid-column: 5 / 9;
+    }
+    .desktop3 {
+        grid-column: 9 / 13;
+    }
+}
+ @media (min-width: 768px) and (max-width: 991px) {
+    .tablet1 {
+        grid-column: 1 / 7;
+        grid-row: 1 / 2;
+    }
+    .tablet2 {
+        grid-column: 7/ 13;
+        grid-row: 1 / 2;
+    }
+    .tablet3 {
+        grid-column: 1 / 13;
+        grid-row: 2 / 3;
+    }
+ }
+
+@media (max-width: 767px) {
+    .row {
+        display: block;
+    }
+}
